@@ -121,7 +121,7 @@ function ContactPage(props) {
         Contact us
       </h3>
       <p>
-        Contact us via <a href="mailto:tyrstudios@gmail.com">email</a> with your project or any questions you may have.
+        Contact us via <a href="mailto:tyrstudio@gmail.com">email</a> with your project or any questions you may have.
       </p>
     </div>
   );
@@ -150,6 +150,5 @@ function MenuBtn(props) {
     </button>
   );
 }
-
 
 export default App;
