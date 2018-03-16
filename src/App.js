@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import viking from './viking.jpg';
 import logo from './logo.svg';
 import './App.css';
 
@@ -55,8 +56,10 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
+        <div className="Head">
+          <img src={viking} className="Viking-logo" alt="logo" />
           <h1 className="App-title">Tyr Studios</h1>
+          </div>
           <div className="Menu">
             {this.renderMenuBtn("Home")}
             {this.renderMenuBtn("Contact")}
@@ -145,9 +148,9 @@ function AboutPage(props) {
 
 function MenuBtn(props) {
   return (
-    <button id={props.value} value={props.value} className="MenuBtn" onClick={props.onClick}>
+    <a id={props.value} value={props.value} className="button btnFade btnPurple" onClick={props.onClick}>
       {props.value}
-    </button>
+    </a>
   );
 }
 
