@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import viking from './viking.jpg';
 import logo from './logo.svg';
+import background from './background-web.jpg';
 import './App.css';
 
 class App extends Component {
@@ -20,6 +21,16 @@ class App extends Component {
       <MenuBtn
         value={location}
         onClick={() => this.handleClick(location)}
+      />
+    );
+  }
+
+  renderLogo(location) {
+    return (
+      <Logo
+        value={location}
+        onClick={() => this.handleClick(location)}
+        img = {viking}
       />
     );
   }
@@ -55,9 +66,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+      <img src={background} alt="bg" class="bg" />
         <header className="App-header">
         <div className="Head">
-          <img src={viking} className="Viking-logo" alt="logo" />
+        {this.renderLogo("Home")}
           <h1 className="App-title">Tyr Studios</h1>
           </div>
           <div className="Menu">
@@ -98,6 +110,7 @@ function HomePage(props) {
           <li>Web development</li>
           <li>IBM Campaign</li>
           <li>IBM Watson Campaign Automation</li>
+          <li>Data Management</li>
           <li>React</li>
           <li>C#</li>
         </ul>
@@ -138,7 +151,7 @@ function AboutPage(props) {
         About us
       </h3>
       <p>
-        Tyr Studios is a hobby project I've started to try and get some exciting and interesting side projects. During the day I'm a fulltime developer at the worlds biggest travel agency. Because of this I can't take on projects that are too big or have a short deadline. My long term goal is to grow this hobby project into a proper business. Trust that we will do our best to make you happy with our work. If you have any questions feel free to <a onClick={props.contactClick}>contact us.</a>
+        Tyr Studios is a hobby project I've started to try and get some exciting and interesting side projects. During the day I'm a fulltime developer/data manager at the worlds biggest travel company. Because of this I can't take on projects that are too big or have a short deadline. My long term goal is to grow this hobby project into a proper business. Trust that we will do our best to make you happy with our work. If you have any questions feel free to <a onClick={props.contactClick}>contact us.</a>
       </p>
     </div>
   );
@@ -150,6 +163,14 @@ function MenuBtn(props) {
   return (
     <a id={props.value} value={props.value} className="button btnFade btnPurple" onClick={props.onClick}>
       {props.value}
+    </a>
+  );
+}
+
+function Logo(props) {
+  return (
+    <a id={props.value} value={props.value} onClick={props.onClick}>
+      <img src={props.img} className="Viking-logo" alt="logo" />
     </a>
   );
 }
