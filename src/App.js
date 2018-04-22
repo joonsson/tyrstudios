@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import viking from './viking.jpg';
 import logo from './logo.svg';
+import twitterIcon from './twitterIcon.png';
 import background from './background-web.jpg';
 import './App.css';
 
@@ -84,7 +85,10 @@ class App extends Component {
           <div class="push"></div>
         </div>
         <footer className="footer">
-          <img src={logo} className="React-logo" alt="logo" />
+        <a id="twitterIcon" href="https://twitter.com/Tyr_Studios" target="_blank">
+        <img src={twitterIcon} className="Twitter-icon" alt="Twitter" /></a>
+        <a id="twitterIcon" href="https://reactjs.org/" target="_blank">
+        <img src={logo} className="React-logo" alt="logo" /></a>
         </footer>
         </div>
       </div>
@@ -161,7 +165,7 @@ function AboutPage(props) {
 
 function MenuBtn(props) {
   return (
-    <a id={props.value} value={props.value} className="button btnFade btnPurple" onClick={props.onClick}>
+    <a id={props.value} value={props.value} className="button btnFade btnTransparent" onClick={props.onClick}>
       {props.value}
     </a>
   );

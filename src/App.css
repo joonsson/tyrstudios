@@ -29,6 +29,10 @@ html, body, #root {
 .footer {
   text-align: center;
   flex-shrink: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
 }
 
 .Head {
@@ -48,6 +52,11 @@ html, body, #root {
   height: 80px;
 }
 
+.Twitter-icon {
+  margin-top: 160px;
+  height: 80px;
+}
+
 .React-logo {
   margin-top: 160px;
   animation: App-logo-spin infinite 20s linear;
@@ -58,8 +67,7 @@ html, body, #root {
   display: flex; 
   flex-direction: column;
   background-color: #222;
-  height: 150px;
-  padding: 20px;
+  padding-top: 20px;
   color: white;
   text-align: center;
   align-items: center;
@@ -93,11 +101,15 @@ a.button {
   float: left;
   width: 120px;
   padding: 0;
-  margin: 10px 20px 10px 0;
+  margin: 10px 20px 0px 0;
   text-align: center;
   line-height: 50px;
   color: #FFF;
-  border-radius: 5px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px; 
+  border-top: 1px white solid;
+  border-left: 1px white solid;
+  border-right: 1px white solid;
   transition: all 0.2s ;
   font-weight: normal;
 }
@@ -108,8 +120,17 @@ a.button {
   background: #A74982;
 }
 
+.btnTransparent {
+  background: none;
+}
+
 .btnFade.btnPurple:hover {
   background: #6D184B;
+}
+
+.btnFade.btnTransparent:hover {
+  background: white;
+  color: black;
 }
 
 a,
