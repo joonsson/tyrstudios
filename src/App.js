@@ -5,6 +5,7 @@ import twitterIcon from './twitterIcon.png';
 import background from './background-web.jpg';
 import './App.css';
 
+//Main class
 class App extends Component {
   constructor(props) {
     super(props);
